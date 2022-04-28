@@ -78,6 +78,7 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
+        "start" : "symfony serve:start --no-tls",
         "post-install-cmd": [
             "@auto-scripts"
         ],
