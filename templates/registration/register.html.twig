@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    {# <div class="container"> 
+        <h1>Register</h1>
+        <br>
+        <form>
+        {{ form_start(registrationForm) }}
+            <div class="mb-3">
+                {{ form_row(registrationForm.email, {
+                    'label': "Email address\n" ,
+                    'attr': {'class': 'form-control'}
+                }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(registrationForm.plainPassword, {
+                    'label': "Password\n" ,
+                    'attr': {'class': 'form-control'}
+                }) }}
+            </div>
+                {{ form_row(registrationForm.agreeTerms, {
+                    'attr': {'class': 'form-check-label'},
+                    'label': "Agree terme"
+                }) }}
+                <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        {{ form_end(registrationForm) }}
+        </form>
+
+    
+        </div>
+    </div> #}
+    <div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+          <h1> <div class="panel-heading">Register</div> </h1>
+          <br>
+          <div class="panel-body">
+            {{ form_start(registrationForm) }}
+            {# <div class="form_group">
+                <div class="col-md-8 col-md-offset-2">
+                  {{ form_row(registrationForm.name, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div> #}
+
+            <div class="form_group">
+                <div class="col-md-8 col-md-offset-2">
+                {{ form_row(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="col-md-8 col-md-offset-2">
+                {{ form_row(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <br> 
+            {{ form_row(registrationForm.agreeTerms, {
+                'attr': {'class': 'form-check-label'},
+                'label': "Agree terme"
+            }) }}           
+            <br> 
+
+            {# <div class="form_group">
+                <div class="col-md-8 col-md-offset-2">
+                {{ form_row(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+              </div>
+            </div> #}
+
+            <div class="form-group">
+                <div class="col-md-8 col-md-offset-4" style="margin-top:5px;">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-btn fa-user"></i> Register
+                    </button>
+                </div>
+            </div>
+            {{ form_end(registrationForm) }}
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
