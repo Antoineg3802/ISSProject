@@ -1,0 +1,24 @@
+.alert.alert-danger {
+    display: none;
+}
+
+.row {
+    margin: auto!important;
+}
+
+#form {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#submitButton {
+    margin-top: 4%;
+}
+
+#account {
+    height: 30px;
+}
+
+#link{
+    text-decoration: none;
+}
