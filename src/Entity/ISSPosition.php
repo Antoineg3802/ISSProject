@@ -19,7 +19,7 @@ class ISSPosition
     #[ORM\Column(type: 'float')]
     private $Latitude;
 
-    #[ORM\Column(type: 'date')]
+    #[ORM\Column(type: 'datetime')]
     private $Date;
 
     public function getId(): ?int
@@ -51,12 +51,12 @@ class ISSPosition
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDate(): ?\DateTime
     {
         return $this->Date;
     }
 
-    public function setDate(\DateTimeInterface $Date): self
+    public function setDate(\DateTime $Date): self
     {
         $this->Date = $Date;
 
