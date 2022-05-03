@@ -22,7 +22,16 @@
 ### Problèmes rencontrés :
   Le développement du  site en meme temps que les autres projets nous a laissé moins de temps que nous aurions voulu passer sur le projet
 
+
 ### Pistes D'amelioration :
   Etant donné l'avancée du site nous avons pas mal de pistes d'amélioration dont nous n'avons du coup pas eu le temps de se pancher comme :
  * Sauvegarde des précedentes positions de l'ISS via un script powershell ou bash dans la base de données pour avoir un historique plus fournis
  * Le front : nous ne sommes pas designer donc le site est pasforcément très très joli 
+
+
+### Procédure d'installation
+* Avoir Composer d'installer et php version 8.1 minimum
+* `git clone https://github.com/Antoineg3802/ISSProject.git`
+* Configurez votre BDD dans le fichier `.env`
+* Dans un terminal `composer update` puis `php bin/console make:migration` puis `php bin/console doctrine:migrations:migrate`
+* Puis effectuez `composer start` et naviguez sur notree site en toute liberté !
