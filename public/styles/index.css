@@ -6,3 +6,16 @@ body{
     height:710px;
     margin : 5px;
 }
+
+#map-connected{
+    height:710px;
+    margin : 5px;
+}
+
+#img-logo{
+    height:30px;
+}
+
+.nav-item{
+    justify-content:end!important;
+}
