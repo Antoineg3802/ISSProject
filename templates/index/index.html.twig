@@ -20,18 +20,19 @@
 {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="container ">
-    <div class="row d-flex flex-row-reverse w-100 h-100">
-        <div id="display-functionality" class="">voici la div</div>
+<div class="container">
+    <div class="row d-flex flex-row justify-content-center w-100 h-100">
+        <div id="explainText" class="row flex-column">
+            <h1 class="text-center">Bienvenue sur ISSProject </h1>
+            <h3 class="text-center mt-3">Notre site vous permettra d'observer en temps réel la position de l'ISS.</h3>
+            <h3 class="text-center">Et si vous vous connectez vous pourrez voir la position de l'iss avec de multiples marqueurs depusi que vous etes connecté et sur la page index !</h3>
+            <h3 class="text-center">Amusez-vous bien !</h3>
+        </div>
         {% if app.user %}
-            <div id="map-connected" class="w-75 justify-content-end"><div>
+            <div id="map-connected" class="row w-100 ml-5"></div>
         {% else %}
-            <div id="map" class="w-75 justify-content-end"></div>
+            <div id="map" class="row w-100 ml-5"></div>
         {% endif %}
     </div>
 </div>
