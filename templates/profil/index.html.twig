@@ -3,7 +3,8 @@
 {% block title %}Hello ProfilController!{% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('styles/profil.css') }}">
+    {# <link rel="stylesheet" href="{{ asset('styles/profil.css') }}"> #}
+    <link rel="stylesheet" href="{{ asset('styles/link.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -34,28 +35,6 @@
                                             </td>
                                             <td class="text-primary username"> {{ app.user.username }} </td>
                                         </tr>
-                                        {# <tr>
-                                            <td>
-                                                <strong>
-                                                    <span
-                                                        class="glyphicon glyphicon-envelope text-primary"
-                                                    ></span>
-                                                    Email
-                                                </strong>
-                                            </td>
-                                            <td class="text-primary email"> orianmaillot@gmail.Com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>
-                                                    <span
-                                                        class="glyphicon glyphicon-calendar text-primary"
-                                                    ></span>
-                                                    Date de création
-                                                </strong>
-                                            </td>
-                                            <td class="text-primary creationDate">12/06/2022</td>
-                                        </tr> #}
                                     </tbody>
                                 </table>
                                 <a class ="text-decoration-none text-reset" href="{{ path('app_logout') }}">
@@ -74,10 +53,11 @@
             </div>
         </div>
     {% else %}
-        <div class="mb-3 align-self-center">
+        <div class="mb-3 align-self-center mt-5">
             <center>
-                <h4> You are not logged, please login in the link : <a href="/login">login</a> </h4>
-                <h6> You can register if you have not an account in the link : <a href="/register">register</a></h6> 
+                <h4> Vous n'etes pas connectez, vous pouvez vous connectez en cliquant sur le lien : <a class="link" href="/login">login</a> </h4>
+                <h6> Vous pouvez aussi vous inscrire sur ce lien : <a class="link" href="/register">register</a></h6> 
+                <img style="height: 80px, padding-left: 200%" class="img-circle img-thumbnail isTooltip  border-0 mt-5 widht" src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg"/>
             </center>
         </div>
     {% endif %}
