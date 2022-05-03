@@ -1,5 +1,4 @@
 function initMap(actualISSPosition, divName) {
-    console.log(divName)
     macarte = L.map(divName).setView([actualISSPosition.lat, actualISSPosition.lon], 3);
     L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
         attribution: '<a href="//openstreetmap.fr">OSM France</a>',
@@ -31,7 +30,6 @@ function markerSetup() {
 
 function setupTrace(){
     let actualISSPosition = {};
-    console.log('setuptrace')
     $.get('http://api.open-notify.org/iss-now.json', '', (data) => {
         actualISSPosition.lat = parseFloat(data.iss_position.latitude);
         actualISSPosition.lon = parseFloat(data.iss_position.longitude);
@@ -49,18 +47,15 @@ window.onload = () => {
     var macarte;
     const map = document.querySelector('#map');
     const mapConnected = document.querySelector('#map-connected');
-    console.log
     $.get('http://api.open-notify.org/iss-now.json', '', (data) => {
         actualISSPosition.lat = parseFloat(data.iss_position.latitude);
         actualISSPosition.lon = parseFloat(data.iss_position.longitude);
     }).then(() => {
         if (map !== null) {
             initMap(actualISSPosition, 'map');
-            console.log('map');
             setInterval(markerSetup, 5000);
         }else if (mapConnected !== null) {
             initMap(actualISSPosition, 'map-connected');
-            console.log('mapConnected');
             setInterval(setupTrace, 5000);
         }else{
             console.log('nope')
